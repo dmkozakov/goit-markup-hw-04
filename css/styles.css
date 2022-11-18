@@ -7,6 +7,7 @@
   --dark-bg-color: #2f303a;
   --bg-main-color: #ffffff;
   --bg-secondary-color: #f5f4fa;
+  --icon-color: #AFB1B8;
 }
 /* button active #188CE8
 font-family: 'Raleway', sans-serif;
@@ -59,7 +60,7 @@ ul {
   padding-right: 15px;
   margin: 0 auto;
 
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
 }
 
 .visually-hidden {
@@ -73,6 +74,10 @@ ul {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   margin: -1px;
+}
+
+.icon {
+  display: block;
 }
 
 /* Навігація сайту */
@@ -144,28 +149,9 @@ ul {
   letter-spacing: 0.02em;
 }
 
-.mail::before {
-  content: '';
-  width: 16px;
-  height: 12px;
+.contacts .icon {
   margin-right: 10px;
-
-  background-image: url(../images/envelope-icon.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
-.phone::before {
-  content: '';
-  width: 10px;
-  height: 16px;
-  margin-right: 10px;
-
-  background-image: url(../images/smartphone-icon.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  fill: currentColor;
 }
 
 .header-page {
@@ -231,32 +217,13 @@ ul {
   margin-right: 0;
 }
 
-.features-list .item::before {
-  display: block;
-  content: '';
-  height: 120px;
-  border-radius: 4px;
+.features-list .icon-bg {
+  max-height: 120px;
   margin-bottom: 30px;
+  padding: 25px 100px;
+  border-radius: 4px;
 
   background-color: var(--bg-secondary-color);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.icon-antenna::before {
-  background-image: url(../images/antenna-icon.svg);
-}
-
-.icon-clock::before {
-  background-image: url(../images/clock-icon.svg);
-}
-
-.icon-diagram::before {
-  background-image: url(../images/diagram-icon.svg);
-}
-
-.icon-astronaut::before {
-  background-image: url(../images/astronaut-icon.svg);
 }
 
 .feature-title {
@@ -351,33 +318,6 @@ ul {
   margin-left: 10px;
 }
 
-.team-social-links .item::before {
-  display: block;
-  content: '';
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.icon-instagram::before {
-  background-image: url(../images/instagram-icon.svg);
-}
-
-.icon-twitter::before {
-  background-image: url(../images/twitter-icon.svg);
-}
-
-.icon-facebook::before {
-  background-image: url(../images/facebook-icon.svg);
-}
-
-.icon-linkedin::before {
-  background-image: url(../images/linkedin-icon.svg);
-}
-
 .team-list .team-card {
   width: calc((100% - 90px) / 4);
   margin-right: 30px;
@@ -391,6 +331,25 @@ ul {
 
 .team-list .team-card:nth-child(4n) {
   margin-right: 0;
+}
+
+.team .social-link {
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  border-radius: 50%;
+
+  color: var(--icon-color)
+  /* background-color: var(--accent-color); */
+}
+
+.team .social-link:hover {
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+}
+
+.team-social-links .icon {
+  fill: currentColor;
 }
 
 /* Секції */
@@ -413,6 +372,7 @@ ul {
 
 .clients-list .item {
   width: calc((100% - 150px) / 6);
+  height: 92px;
 }
 
 .clients-list .item + .item {
@@ -422,8 +382,19 @@ ul {
 .clients-logo {
   display: block;
   padding: 16px 32px;
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--icon-color);
   border-radius: 4px;
+  
+  color: var(--icon-color);
+}
+
+.clients-logo .icon {
+  fill: currentColor;
+}
+
+.clients-logo:hover {
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 
 /* Футер */
@@ -501,17 +472,25 @@ ul {
   text-transform: uppercase;
 }
 
-.social-links {
+.social-links-list {
   display: flex;
 }
 
-.social-links .item + .item {
+.social-links-list .social-link{
+  padding: 12px;
+  color: var(--primary-white-color);
+}
+
+.social-links-list .icon {
+  fill: currentColor;
+}
+
+.social-links-list .item + .item {
   margin-left: 10px;
 }
 
-.social-links .item::before {
+.social-link {
   display: block;
-  content: '';
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -519,6 +498,28 @@ ul {
   background-color: rgba(255, 255, 255, 0.1);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.social-link.icon-instagram {
+  background-image: url(../images/instagram-icon.svg);
+}
+
+.social-link.icon-twitter {
+  background-image: url(../images/twitter-icon.svg);
+  /* Змінити на SVG спрайт */
+}
+
+.social-link.icon-facebook {
+  background-image: url(../images/facebook-icon.svg);
+}
+
+.social-link.icon-linkedin {
+  background-image: url(../images/linkedin-icon.svg);
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
 }
 
 /* Портфоліо */
