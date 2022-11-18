@@ -9,9 +9,6 @@
   --bg-secondary-color: #f5f4fa;
   --icon-color: #afb1b8;
 }
-/* button active #188CE8
-font-family: 'Raleway', sans-serif;
-font-family: 'Roboto', sans-serif; */
 
 body {
   color: var(--primary-text-color);
@@ -81,6 +78,7 @@ ul {
 }
 
 /* Навігація сайту */
+
 .logo-header {
   margin-right: 94px;
 
@@ -110,11 +108,6 @@ ul {
 .contacts .item + .item {
   margin-left: 50px;
 }
-
-/* .site-nav-list .item,
-.contacts .item {
-  outline: 2px solid red;
-} */
 
 .site-nav-list .link {
   display: block;
@@ -218,9 +211,11 @@ ul {
 }
 
 .features-list .icon-bg {
-  max-height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
   margin-bottom: 30px;
-  padding: 25px 100px;
   border-radius: 4px;
 
   background-color: var(--bg-secondary-color);
@@ -277,6 +272,7 @@ ul {
 }
 
 /* Команда */
+
 .team {
   background-color: var(--bg-secondary-color);
 }
@@ -334,13 +330,15 @@ ul {
 }
 
 .team .social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 44px;
   height: 44px;
-  padding: 12px;
   border-radius: 50%;
 
   color: var(--icon-color);
-  /* background-color: var(--accent-color); */
 }
 
 .team .social-link:hover {
@@ -380,8 +378,10 @@ ul {
 }
 
 .clients-logo {
-  display: block;
-  padding: 16px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 92px;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
 
@@ -476,11 +476,6 @@ ul {
   display: flex;
 }
 
-.social-links-list .social-link {
-  padding: 12px;
-  color: var(--primary-white-color);
-}
-
 .social-links-list .icon {
   fill: currentColor;
 }
@@ -490,11 +485,14 @@ ul {
 }
 
 .social-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
 
+  color: var(--primary-white-color);
   background-color: rgba(255, 255, 255, 0.1);
   background-repeat: no-repeat;
   background-position: center;
